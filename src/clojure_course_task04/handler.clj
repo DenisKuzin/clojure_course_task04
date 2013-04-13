@@ -6,9 +6,9 @@
             [me.raynes.laser :as l]))
 
 (defroutes app-routes
-  (GET "/" [] (l/document (l/parse (file (str (System/getenv "OPENSHIFT_REPO_DIR") "html/root.html")))))
-  (GET "/about" [] (l/document (l/parse (file (str (System/getenv "OPENSHIFT_REPO_DIR") "html/about.html")))))
-  (GET "/contact" [] (l/document (l/parse (file (str (System/getenv "OPENSHIFT_REPO_DIR") "html/contact.html")))))
+  (GET "/" [] (l/document (l/parse (file (str (System/getenv "OPENSHIFT_REPO_DIR") "webapps/html/root.html")))))
+  (GET "/about" [] (l/document (l/parse (file (str (System/getenv "OPENSHIFT_REPO_DIR") "webapps/html/about.html")))))
+  (GET "/contact" [] (l/document (l/parse (file (str (System/getenv "OPENSHIFT_REPO_DIR") "webapps/html/contact.html")))))
   (route/resources "/")
   (route/not-found "Not Found"))
 
