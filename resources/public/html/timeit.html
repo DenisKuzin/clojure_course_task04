@@ -41,14 +41,29 @@
     </div>
     <div class="container">
       <div class="page-header">
-	<h1>My clojure utils</h1>
+	<h1>TimeIt</h1>
       </div>
-	<dl class="dl-horizontal">
-	  <dt><a href="asdf">TimeIt</a></dt>
-	  <dd>Clojure code running time</dd>
-	  <dt><a href="asdf">FORTS trends</a></dt>
-	  <dd>Changes on Moscow Exchange, FORTS section</dd>
-	</dl>
+      <form class="form-horizontal" action="" method="post">
+	<div class="control-group">
+	  <label class="control-label" for="inputProblem">Problem, that code solve</label>
+	  <div class="controls">
+	    <select id="inputProblem" name="problem">
+	    </select>
+	  </div>
+	</div>
+	<div class="control-group">
+	  <label class="control-label" for="inputCode">Clojure expression to bench</label>
+	  <div class="controls">
+	    <textarea rows="3" id="inputCode" name="expression"></textarea>
+	  </div>
+	</div>
+	<div class="form-actions">
+	  <button type="submit" class="btn btn-primary"><i class="icon-time icon-white"></i> Bench</button>
+	  <a class="btn" href="/timeit-add-problem"><i class="icon-plus"></i> Add problem</a>
+	</div>
+	<div id="results">
+	</div>
+      </form>
     </div>
   </body>
 </html>
